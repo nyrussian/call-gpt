@@ -48,7 +48,7 @@ app.ws('/connection', (ws) => {
       streamService.setStreamSid(streamSid);
       gptService.setCallSid(callSid);
       console.log(`Twilio -> Starting Media Stream for ${streamSid}`.underline.red);
-      ttsService.generate({partialResponseIndex: null, partialResponse: 'Hello! I understand you\'re looking for a pair of AirPods, is that correct?'}, 1);
+      ttsService.generate({partialResponseIndex: null, partialResponse: 'Hello, Thank you for Calling Appliance Recovery. How can I help you?'}, 1);
     } else if (msg.event === 'media') {
       transcriptionService.send(msg.media.payload);
     } else if (msg.event === 'mark') {
